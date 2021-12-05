@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background: linear-gradient(#2b1055, #7597de);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1rem 3rem;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+header .logo{
+    flex: 1 1 20rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 20rem;
+}
+
+header ul li a{
+    padding: 6px 15px;   
+    border-radius: 30rem;
+}
+
+header ul li a:hover, header ul li a.active{
+    background-color: white;
+    color: #2b1055;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 6.25rem;
+    overflow: hidden;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6.5rem;
+    background: linear-gradient(to top, #1c0522,transparent);
+    z-index: 1000;
+}
+
+section img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#moon{
+    mix-blend-mode: screen;
+}
+
+#text{
+    color: white;
+    position: absolute;
+    font-size: 7.5vw;
+    z-index: 9;
+    white-space: nowrap;
+    right: -300px;
+}
+
+#mountain_front{
+    z-index: 10;
+}
+
+#btn{
+    padding: 0.4rem 1.4rem;
+    border-radius: 5rem;
+    background: white;
+    color: #2b1055;
+    font-size: 1.2rem;
+    z-index: 9;
+    transform: translateY(5rem);
+}
+
+.sec{
+    padding: 6.5rem;
+    position: relative;
+    background: #1c0522;
+}
+
+.sec h2{
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.sec p{
+    font-size: 1rem;
+    color: white;
+}
+
+@media screen and (max-width: 930px) {
+    html{
+        font-size: 70%;
+    }
+    header .logo{
+        text-align: center;
+        margin: 1rem 0rem;
+        font-size: 3rem;
+    }
+}
